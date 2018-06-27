@@ -91,7 +91,7 @@ ALIGN_CONFIGS = [#('--align-smart', 'crp'),
 # the last element in a tuple is the string that goes into the results directory name
 
 MODE_CONFIGS = [
-                ('mle', '', 'mle'),
+                ('mle', '', ''),
                 ('mrt', '--alpha=1', '1', 15, 25),  # with action edit cost
 
                 ]
