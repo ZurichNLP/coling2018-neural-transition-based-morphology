@@ -3,7 +3,7 @@
 
 SEEDS = [1, 2, 3, 4, 5]
 
-RESULTSDIR = '/mnt/storage/bender/projects/cl/sigmorphon-uzh/paper2018/results/'
+RESULTSDIR = '../../paper2018/results/'
 
 DATASET_PATH = '../data/celex-by-task/'
 
@@ -17,24 +17,21 @@ DATASET_TESTFILE_NAME = 'test'
 
 MODEL_CONFIGS = [('hard', '', 'hard'),
                  ('haem', '', 'haem'),
-                 ('hacm', '', 'hacm'),
-                 ('haem', '--substitution', 'haem_sub'),
-                 ('hacm', '--copy-as-substitution', 'hacm_sub')
+
                 ]
 
 # the last element in a tuple is the string that goes into the results directory name
 
 # ALIGN CALL, name:
 ALIGN_CONFIGS = [('--align-smart', 'crp'),
-                 ('--align-cls', 'cls')
+                # ('--align-cls', 'cls')
                 ]
 
 
 # the last element in a tuple is the string that goes into the results directory name
 
 MODE_CONFIGS = [('mle', '', 'mle'),
-                 #('rl', 'DUMMY', 'rl'),
-                 ('mrt', 'DUMMY', 'mrt')
+                  ('mrt', '--alpha=1', '1', 15, 25),  # with action edit cost
                ]
 
 
@@ -46,5 +43,5 @@ MORE_PARAMS = dict(
     DATAFORMAT = '--no-feat-format',  # and no --sigm2017format flag
     POSEMB     = '',  # no --pos-emb flag
     # DECODING
-    BEAMWIDTHS   = '4,6,8'
+    BEAMWIDTHS   = '4'
 )
