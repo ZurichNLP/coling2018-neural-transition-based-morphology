@@ -3,7 +3,7 @@ import models
 SEEDS = [5]
 
 
-RESULTSDIR = '/mnt/storage/bender/projects/cl/sigmorphon-uzh/paper2018/results/lemmatization'  #'../results/lemmatization'
+RESULTSDIR = '../../paper2018/results/lemmatization'
 
 
 DATASET_SHORTNAME = 'lemmatization'
@@ -26,30 +26,27 @@ DATASET_TESTFILE_NAME = 'test.txt'
 
 # the last element in a tuple is the string that goes into the results directory name
 
-MODEL_CONFIGS = [#('hard', '', 'hard'),
+MODEL_CONFIGS = [
+                ('hard', '', 'hard'),
                  ('haem', '', 'haem'),
-#                ('hacm', '', 'hacm'),
-#                 ('haem', '--substitution', 'haem_sub'),
-#                 ('hacm', '--copy-as-substitution', 'hacm_sub')
+
                 ]
 
 # the last element in a tuple is the string that goes into the results directory name
 
 # ALIGN CALL, name:
-ALIGN_CONFIGS = [#('--align-smart', 'crp'),
+ALIGN_CONFIGS = [
+                ('--align-smart', 'crp'),
                  ('--align-cls', 'cls')
                 ]
 
 
 # the last element in a tuple is the string that goes into the results directory name
 
-MODE_CONFIGS = [#('mle', '', 'mle'),
-                #('rl', 'DUMMY', 'rl'),
-                #('mrt', 'DUMMY', 'mrt'),
-                #('ss', '--pretrain-epochs=0', 'r', 10, 15)
-                #models.lols_margin(10, 15),  # seed 1 computed
-                models.lols(10, 15),
-                #models.dynamic_oracles(10, 15)
+MODE_CONFIGS = [
+                ('mle', '', ''),
+                ('mrt', '--alpha=1', '1', 15, 25),  # with action edit cost
+
                ]
 
 
