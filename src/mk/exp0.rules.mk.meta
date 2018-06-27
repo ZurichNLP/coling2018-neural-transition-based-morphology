@@ -1,0 +1,48 @@
+# Meta rules where each XVNSET variable can be __XVN__
+# Will be expanded by python program
+# When written in brackeets {_XVN_} the first two character -\w will be stripped .
+# s{SEED}/x-{SYSTEM}-{ADDITIONALARGS}-{ADDITIONALARGS2}-{EPOCHS}-{HIDDEN}-{BEAM}-x/{LNG}-{SETTING}.best.dev
+
+# Rule for HARD
+$(RESULTSDIR)/x-shdmix_XV2_-o_XV4__XV5__XV6__XV7_-x/%-$(SETTING).best.dev:
+	#
+	# CREATING $(RESULTSDIR)_/x-shdmix_XV2_-o_XV4__XV5__XV6__XV7_-x/$*-$(SETTING).best.dev
+	$(SETPYTHONENVIRONMENT) && mkdir -p $(@D) && \
+	/usr/bin/time -v python hard_mix.py --dynet-mem 2000 --dynet-seed {_XV7_} --epochs {_XV4_} --hidden={_XV5_} \
+	--align_smart --beam-width={_XV6_} --patience={_XV2_} task1/$*-train-$(SETTING) task1/$*-dev \
+	$(RESULTSDIR)/x-shdmix_XV2_-o_XV4__XV5__XV6__XV7_-x/$*-$(SETTING) \
+	--test_path=task1/$*-covered-test > $@.err
+
+# Rule for HARD MIX DUMB
+$(RESULTSDIR)/x-shdmixdmb_XV2_-o_XV4__XV5__XV6__XV7_-x/%-$(SETTING).best.dev:
+	#
+	# CREATING $(RESULTSDIR)_/x-shdmixdmb_XV2_-o_XV4__XV5__XV6__XV7_-x/$*-$(SETTING).best.dev
+	$(SETPYTHONENVIRONMENT) && mkdir -p $(@D) && \
+	/usr/bin/time -v python hard_mix.py --dynet-mem 2000 --dynet-seed {_XV7_} --epochs {_XV4_} --hidden={_XV5_} \
+	--align_dumb --beam-width={_XV6_}  --patience={_XV2_} task1/$*-train-$(SETTING) task1/$*-dev \
+	$(RESULTSDIR)//x-shdmixdmb_XV2_-o_XV4__XV5__XV6__XV7_-x/$*-$(SETTING) \
+	--test_path=task1/$*-covered-test > $@.err
+
+# Rule for TRANS DUMB
+# python transition_inflector.py --dynet-seed 42 --dynet-mem 500 --epochs=50 --align_dumb  task1/russian-train-low task1/russian-dev CHECKCHECK/ussian  --test_path=task1/russian-covered-test
+
+$(RESULTSDIR)/x-strdmb_XV2_-o_XV4__XV5__XV6__XV7_-x/%-$(SETTING).best.dev:
+	#
+	# CREATING $(RESULTSDIR)/x-strdmb_XV2_-o_XV4__XV5__XV6__XV7_-x/$*-$(SETTING).best.dev
+	$(SETPYTHONENVIRONMENT) && mkdir -p $(@D) && \
+	/usr/bin/time -v python transition_inflector.py --dynet-mem 2000 --dynet-seed {_XV7_} --epochs {_XV4_} --hidden={_XV5_} \
+	--align_dumb --patience={_XV2_} task1/$*-train-$(SETTING) task1/$*-dev \
+	$(RESULTSDIR)//x-strdmb_XV2_-o_XV4__XV5__XV6__XV7_-x/$*-$(SETTING) \
+	--test_path=task1/$*-covered-test > $@.err
+
+# Rule for TRANS CRP
+# python transition_inflector.py --dynet-seed 42 --dynet-mem 500 --epochs=50 --align_dumb  task1/russian-train-low task1/russian-dev CHECKCHECK/ussian  --test_path=task1/russian-covered-test
+
+$(RESULTSDIR)/x-strcrp_XV2_-o_XV4__XV5__XV6__XV7_-x/%-$(SETTING).best.dev:
+	#
+	# CREATING $(RESULTSDIR)/x-strcrp_XV2_-o_XV4__XV5__XV6__XV7_-x/$*-$(SETTING).best.dev
+	$(SETPYTHONENVIRONMENT) && mkdir -p $(@D) && \
+	/usr/bin/time -v python transition_inflector.py --dynet-mem 2000 --dynet-seed {_XV7_} --epochs {_XV4_} --hidden={_XV5_} \
+	--align_smart --patience={_XV2_} task1/$*-train-$(SETTING) task1/$*-dev \
+	$(RESULTSDIR)//x-strcrp_XV2_-o_XV4__XV5__XV6__XV7_-x/$*-$(SETTING) \
+	--test_path=task1/$*-covered-test > $@.err

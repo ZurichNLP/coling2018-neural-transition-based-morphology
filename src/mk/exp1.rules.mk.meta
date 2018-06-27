@@ -1,0 +1,50 @@
+# Meta rules where each XVNSET variable can be __XVN__
+# Will be expanded by python program
+# When written in brackeets {_XVN_} the first two character -\w will be stripped .
+# /x-{SYSTEM}-{EPOCHS}-{PATIENCE}-{DROPOUT}-{BEAM}-x/seed-{SEED}/{LNG}-{SETTING}.dev.eval
+
+
+# Rule for HACM smart
+# python run_transducer.py --dynet-seed 1 --epochs=50 --patience=10 russian-train-medium russian-dev RUSSIAN-HACM-MEDIUM-CPL/1 --dropout=0 --transducer=hacm
+$(RESULTSDIR)/x-hacmsmrt_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/%-$(SETTING).dev.eval:
+	#
+	# CREATING $(RESULTSDIR)/x-hacmsmrt_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/$*-$(SETTING).dev.eval
+	$(SETPYTHONENVIRONMENT) && mkdir -p $(@D) && cd ../lib && \
+	PYTHONIOENCODING=utf8 python run_transducer.py --dynet-seed $(SEED) --epochs={_XV2_} \
+	--patience={_XV3_} --dropout={_XV4_} --transducer=hacm --sigm2017_format \
+	$*-train-$(SETTING) $*-dev x-hacmsmrt_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/$*-$(SETTING) \
+	--test-path=$*-covered-test > $@.err
+
+# Rule for HACM cls
+# python run_transducer.py --dynet-seed 1 --epochs=50 --patience=10 russian-train-medium russian-dev RUSSIAN-HACM-MEDIUM-CPL/1 --dropout=0 --transducer=hacm --align-cls
+$(RESULTSDIR)/x-hacmcls_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/%-$(SETTING).dev.eval:
+	#
+	# CREATING $(RESULTSDIR)/x-hacmcls_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/$*-$(SETTING).dev.eval
+	$(SETPYTHONENVIRONMENT) && mkdir -p $(@D) &&  cd ../lib && \
+	PYTHONIOENCODING=utf8 python run_transducer.py --dynet-seed $(SEED) --epochs={_XV2_} \
+	--patience={_XV3_} --dropout={_XV4_} --transducer=hacm --align-cls --sigm2017_format \
+	$*-train-$(SETTING) $*-dev x-hacmcls_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/$*-$(SETTING) \
+	--test-path=$*-covered-test > $@.err
+
+# Rule for HAEM smart
+# python run_transducer.py --dynet-seed 1 --epochs=50 --patience=10 russian-train-medium russian-dev RUSSIAN-HACM-MEDIUM-CPL/1 --dropout=0 --transducer=haem
+$(RESULTSDIR)/x-haemsmrt_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/%-$(SETTING).dev.eval:
+	#
+	# CREATING $(RESULTSDIR)/x-haemsmrt_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/$*-$(SETTING).dev.eval
+	$(SETPYTHONENVIRONMENT) && mkdir -p $(@D) && cd ../lib && \
+	PYTHONIOENCODING=utf8 python run_transducer.py --dynet-seed $(SEED) --epochs={_XV2_} \
+	--patience={_XV3_} --dropout={_XV4_} --transducer=haem --sigm2017_format \
+	$*-train-$(SETTING) $*-dev x-haemsmrt_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/$*-$(SETTING) \
+	--test-path=$*-covered-test > $@.err
+
+# Rule for HAEM cls 
+# python run_transducer.py --dynet-seed 1 --epochs=50 --patience=10 russian-train-medium russian-dev RUSSIAN-HACM-MEDIUM-CPL/1 --dropout=0 --transducer=haem --align-cls
+$(RESULTSDIR)/x-haemcls_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/%-$(SETTING).dev.eval:
+	#
+	# CREATING $(RESULTSDIR)/x-haemcls_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/$*-$(SETTING).dev.eval
+	$(SETPYTHONENVIRONMENT) && mkdir -p $(@D) && cd ../lib && \
+	PYTHONIOENCODING=utf8 python run_transducer.py --dynet-seed $(SEED) --epochs={_XV2_} \
+	--patience={_XV3_} --dropout={_XV4_} --transducer=haem --align-cls --sigm2017_format \
+	$*-train-$(SETTING) $*-dev x-haemcls_XV2__XV3__XV4__XV5_-x/seed-$(SEED)/$*-$(SETTING) \
+	--test-path=$*-covered-test > $@.err
+

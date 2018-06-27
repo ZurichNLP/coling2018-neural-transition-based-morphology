@@ -1,0 +1,6 @@
+*.pyc
+*.so
+._*
+results/x-*
+*nohup*
+
