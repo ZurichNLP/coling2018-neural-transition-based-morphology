@@ -1,24 +1,32 @@
-[submodule "cv-make"]
-	path = src/cv-make
-	url = git@gitlab.cl.uzh.ch:siclemat/cv-make.git
-[submodule "src/conll2017"]
-	path = src/conll2017
-	url = https://github.com/sigmorphon/conll2017.git
-	branch = master
-[submodule "data/sigmorphon2016"]
-	path = data/sigmorphon2016
-	url = https://github.com/ryancotterell/sigmorphon2016.git
-[submodule "data/celex"]
-	path = data/celex
-	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/celex.git
-	branch = master
 [submodule "data/sigmorphon-task1-2017"]
 	path = data/sigmorphon-task1-2017
 	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/sigmorphon-task1-2017.git
 	branch = master
+[submodule "data/sigmorphon-task1-2017git"]
+	path = data/sigmorphon-task1-2017git
+	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/sigmorphon-task1-2017.git
+	branch = master
+[submodule "data/celex"]
+	path = data/celex
+	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/celex
+	branch = master
+[submodule "src/conll2017"]
+	path = src/conll2017
+	url = https://github.com/sigmorphon/conll2017
+	branch = master
 [submodule "data/wicentowski-lemmatization"]
 	path = data/wicentowski-lemmatization
-	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/wicentowski-lemmatization.git
+	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/wicentowski-lemmatization
+	branch = master
+[submodule "src/cv-make"]
+	path = src/cv-make
+	url = git@gitlab.cl.uzh.ch:siclemat/cv-make
+	branch = master
 [submodule "data/celex-by-task"]
 	path = data/celex-by-task
-	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/celex-by-task.git
+	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/celex-by-task
+	branch = master
+[submodule "data/sigmorphon2016"]
+	path = data/sigmorphon2016
+	url = https://github.com/ryancotterell/sigmorphon2016
+	branch = master
