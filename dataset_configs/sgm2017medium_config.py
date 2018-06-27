@@ -37,7 +37,6 @@ DATASET_FOLDS = [
 'italian_',
 'khaling_',
 'kurmanji_',
-## launched on vigrid sgm2017medium3.mk
 'latin_',
 'latvian_',
 'lithuanian_',
@@ -48,7 +47,6 @@ DATASET_FOLDS = [
 'norwegian-bokmal_',
 'norwegian-nynorsk_',
 'persian_',
-## launched on gimli sgm2017medium2.mk
 'polish_',
 'portuguese_',
 'quechua_',
@@ -74,33 +72,24 @@ DATASET_TESTFILE_NAME = 'test.txt'
 
 # the last element in a tuple is the string that goes into the results directory name
 
-MODEL_CONFIGS = [#('hard', '', 'hard'),
+MODEL_CONFIGS = [('hard', '', 'hard'),
                  ('haem', '', 'haem'),
-                 #('hacm', '', 'hacm'),
-                 #('haem', '--substitution', 'haem_sub'),
-                 #('hacm', '--copy-as-substitution', 'hacm_sub')
+
                 ]
 
 # the last element in a tuple is the string that goes into the results directory name
 
 # ALIGN CALL, name:
 ALIGN_CONFIGS = [('--align-smart', 'crp'),
-                 #('--align-cls', 'cls')
+                 ('--align-cls', 'cls')
                 ]
 
 
 # the last element in a tuple is the string that goes into the results directory name
 
-MODE_CONFIGS = [#('mle', '', 'mle'),
-                # ('rl', 'DUMMY', 'rl'),
-                #('mrt', 'DUMMY', 'mrt'),
-                ('mrt', '--alpha=1', '1a', 10, 15),  # with action edit cost
-                # ('ss', '--ss-pretrain-epoch=0 --ss-beta=0.5', 'ro', 10, 15)
-                #models.dynamic_oracles(10, 15),
-                #models.lols(10, 15),
-                #models.lols_margin(10, 15)
-                #models.lols_sub_margin(10, 15),
-                #models.lols_ins_margin(10, 15)
+MODE_CONFIGS = [
+                ('mle', '', ''),
+                ('mrt', '--alpha=1', '1', 15, 25),  # with action edit cost
                ]
 
 

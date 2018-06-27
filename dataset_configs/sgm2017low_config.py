@@ -76,15 +76,12 @@ DATASET_TESTFILE_NAME = 'test.txt'
 
 MODEL_CONFIGS = [('hard', '', 'hard'),
                  ('haem', '', 'haem'),
-                 #('hacm', '', 'hacm'),
-                 #('haem', '--substitution', 'haem_sub'),
-                 #('hacm', '--copy-as-substitution', 'hacm_sub')
                 ]
 
 # the last element in a tuple is the string that goes into the results directory name
 
 # ALIGN CALL, name:
-ALIGN_CONFIGS = [#('--align-smart', 'crp'),
+ALIGN_CONFIGS = [('--align-smart', 'crp'),
                  ('--align-cls', 'cls')]
 
 
@@ -93,7 +90,6 @@ ALIGN_CONFIGS = [#('--align-smart', 'crp'),
 MODE_CONFIGS = [
                 ('mle', '', ''),
                 ('mrt', '--alpha=1', '1', 15, 25),  # with action edit cost
-
                 ]
 
 
