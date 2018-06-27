@@ -8,8 +8,12 @@ Our environment when running the experiments:
  - Debian 9
  - python 2.7.13
  - dynet v2.0.2
- - a few external python modules
+ - a few external python modules: docopt progressbar editdistance 
  
 
 ### Setup
+```git clone --recursive ```
+
 In order to setup a few things and compile the Chinese Restaurant
+
+```make setup```

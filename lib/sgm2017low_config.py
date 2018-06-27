@@ -74,7 +74,7 @@ DATASET_TESTFILE_NAME = 'test.txt'
 
 MODEL_CONFIGS = [('hard', '', 'hard'),
                  ('haem', '', 'haem'),
-                 ('hacm', '', 'hacm'),
+                 #('hacm', '', 'hacm'),
                  #('haem', '--substitution', 'haem_sub'),
                  #('hacm', '--copy-as-substitution', 'hacm_sub')
                 ]
@@ -88,7 +88,7 @@ ALIGN_CONFIGS = [('--align-smart', 'crp'), ('--align-cls', 'cls')]
 # the last element in a tuple is the string that goes into the results directory name
 
 MODE_CONFIGS = [('mle', '', 'mle'),
-                 ('rl', 'DUMMY', 'rl'),
+
                  ('mrt', 'DUMMY', 'mrt')]
 
 
@@ -101,5 +101,5 @@ MORE_PARAMS = dict(
     DATAFORMAT = '--sigm2017format',
     POSEMB     = '--pos-emb',
     # DECODING
-    BEAMWIDTHS   = '4,8,12,16'  # Different from other datasets!
+    BEAMWIDTHS   = '4'  # Different from other datasets!
 )
