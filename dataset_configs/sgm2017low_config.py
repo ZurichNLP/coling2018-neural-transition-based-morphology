@@ -74,7 +74,7 @@ DATASET_TESTFILE_NAME = 'test.txt'
 
 # the last element in a tuple is the string that goes into the results directory name
 
-MODEL_CONFIGS = [#('hard', '', 'hard'),
+MODEL_CONFIGS = [('hard', '', 'hard'),
                  ('haem', '', 'haem'),
                  #('hacm', '', 'hacm'),
                  #('haem', '--substitution', 'haem_sub'),
@@ -90,14 +90,10 @@ ALIGN_CONFIGS = [#('--align-smart', 'crp'),
 
 # the last element in a tuple is the string that goes into the results directory name
 
-MODE_CONFIGS = [#('mle', '', 'mle'),
-                #('rl', 'DUMMY', 'rl'),
-                #('mrt', 'DUMMY', 'mrt'),
-                ('mrt', '--alpha=1', '1a', 15, 25),  # with action edit cost
-                # ('ss', '--pretrain-epochs=0', 'r', 15, 20),
-                #models.dynamic_oracles(15, 20),
-                #models.lols(15, 20),
-                #models.lols_margin(15, 20)
+MODE_CONFIGS = [
+                ('mle', '', 'mle'),
+                ('mrt', '--alpha=1', '1', 15, 25),  # with action edit cost
+
                 ]
 
 
@@ -110,5 +106,5 @@ MORE_PARAMS = dict(
     DATAFORMAT = '--sigm2017format',
     POSEMB     = '--pos-emb',
     # DECODING
-    BEAMWIDTHS   = '4'  
+    BEAMWIDTHS   = '4'
 )
