@@ -12,22 +12,6 @@
 	path = data/celex
 	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/celex.git
 	branch = master
-[submodule "data/Segmentation"]
-	path = data/Segmentation
-	url = https://github.com/ryancotterell/canonical-segmentation.git
-	branch = master
-[submodule "data/ddn13"]
-	path = data/ddn13
-	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/ddn13.git
-	branch = master
-[submodule "data/nck15"]
-	path = data/nck15
-	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/nck15.git
-	branch = master
-[submodule "data/canonical-segmentation"]
-	path = data/canonical-segmentation
-	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/canonical-segmentation.git
-	branch = master
 [submodule "data/sigmorphon-task1-2017"]
 	path = data/sigmorphon-task1-2017
 	url = git@gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/sigmorphon-task1-2017.git
