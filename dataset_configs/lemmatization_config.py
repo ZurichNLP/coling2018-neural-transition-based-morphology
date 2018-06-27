@@ -45,7 +45,7 @@ ALIGN_CONFIGS = [
 
 MODE_CONFIGS = [
                 ('mle', '', ''),
-                ('mrt', '--alpha=1', '1', 15, 25),  # with action edit cost
+#                ('mrt', '--alpha=1', '1', 15, 25),  # with action edit cost
 
                ]
 
