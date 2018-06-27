@@ -5,3 +5,4 @@ libalign.so: align.c
 
 clean:
 	/bin/rm libalign.so *.pyc
+
