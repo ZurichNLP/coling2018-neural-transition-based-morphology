@@ -1,4 +1,4 @@
-# Research code for the coling 2018 paper ""Neural Transition-based String Transduction for Limited-Resource Setting in Morphology" by Peter Makarov and Simon Clematide 
+# Research code for the coling 2018 paper "Neural Transition-based String Transduction for Limited-Resource Setting in Morphology" by Peter Makarov and Simon Clematide 
 This [code basis](https://github.com/ZurichNLP/coling2018-neural-transition-based-morphology) allows for the reproduction of the results of our experiments.
 Note that there is a separate git repository that contains all our [test data results of our reported systems](https://github.com/ZurichNLP/coling2018-neural-transition-based-morphology-test-data) in a consistently named and organized way. 
 And it also contains the respective gold standard data.
@@ -32,7 +32,7 @@ All models are automatically evaluated.
 ``` cd lib && python  ./launch_dataset.py ../dataset_configs/sgm2017low_config.py > sgm2017low.sh ; bash -x sgm2017low.sh ``` 
 
 The test set results for a language LANG and seed SEED can be found in ` ../paper2018/results/sgm2017low/x-haem-acls-psgm2017low-n200_1-w100_20_100_T-e60_15-oADADELTA_0-mmle-x/{LANG}_/s_{SEED}}/f.beam4.test.predictions`.
-The relevant experimental variables are encoded in the directory below the shortname of the data set (e.g. sgm2017lw) as follows:
+The relevant experimental variables are encoded in the directory below the shortname of the data set (e.g. sgm2017low) as follows:
  - `-haem` = CA
  - `-hard` = HA\*
  - `-acls` = LCS (longest common substring alignment)
