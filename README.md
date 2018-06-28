@@ -71,6 +71,17 @@ The relevant experimental variables are encoded in the directory below the short
 
 
 ## Computing ensembles
-The ensembling of models and their evaluation works analogue to the model creation.
+The ensembling of models and their evaluation works analogue to the model launching:
 
 ```cd lib && python launch_dataset_ensembling.py ../dataset_configs/sgm2017low_config.py```
+
+
+## Connection between official results and computed results
+The exact definition of which results from which result directory actually went into which table of our paper (and the corresponding test data in <https://github.com/ZurichNLP/coling2018-neural-transition-based-morphology-test-data>) can be found 
+in the makefiles in <https://github.com/ZurichNLP/coling2018-neural-transition-based-morphology/coling2018-datasets> and in <https://github.com/ZurichNLP/coling2018-neural-transition-based-morphology-test-data>.  
+
+
+Feel free to ask <simon.clematide@uzh.ch> for questions related to the data or <makarov@cl.uzh.ch> for questions regarding the code.
+
+We want to thank Tatyana Ruzsics for all her valuable input, code and inspiration!
+
