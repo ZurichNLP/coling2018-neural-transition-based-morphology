@@ -224,7 +224,7 @@ def process(options,args):
     PARAMS.update(MORE_PARAMS)
     inputextra = ''.join(['T' if PARAMS['PARAMTYING'] else '',
                           'A' if PARAMS['POSEMB'] == '--avm-feat-format' else ''])
-    inputextra = '_' + inputextra if inputextra else '' 
+    inputextra = '_' + inputextra if inputextra else ''
     optextra = '_l2' if PARAMS['L2'] else ''
     if options.epochs > 0:
         PARAMS['EPOCHS'] = options.epochs
@@ -288,7 +288,7 @@ def process(options,args):
 
             elif DATASET_SHORTNAME == 'sgm2017high':
                 pass
-            
+
             if m_config_len == 5:
                 PARAMS['MLE_PATIENCE'] = MLE_PATIENCE
                 PARAMS['PATIENCE'] = MR_PATIENCE
@@ -384,7 +384,7 @@ def process_ensembles(options,args):
     PARAMS.update(MORE_PARAMS)
     inputextra = ''.join(['T' if PARAMS['PARAMTYING'] else '',
                           'A' if PARAMS['POSEMB'] == '--avm-feat-format' else ''])
-    inputextra = '_' + inputextra if inputextra else '' 
+    inputextra = '_' + inputextra if inputextra else ''
     optextra = '_l2' if PARAMS['L2'] else ''
 
     PREDICTION_TEMPLATE = RESULTSDIR + '''{RESULTSPATH}/{DATASET_SHORTNAME}/{RESULTS_DIR}/{FOLD}/s_{SEED}/f.{DEC}.{SET}.predictions'''
@@ -433,12 +433,12 @@ def process_ensembles(options,args):
 
             elif DATASET_SHORTNAME == 'sgm2017high':
                 pass
-            
+
             if m_config_len == 5:
                 PARAMS['MLE_PATIENCE'] = MLE_PATIENCE
                 PARAMS['PATIENCE'] = MR_PATIENCE
 
-            
+
             if DATASET_SHORTNAME.startswith('sgm2017'):
                 #merge_keys_flag = '--merge_same_keys'
                 EVAL_MERGE_KEYS_FLAG = '--merge_same_keys'
@@ -535,7 +535,7 @@ def main():
                       action='store', dest='seeds', default="1,2,3,4,5",
                       help='comma-separated dynet seed numbers (%default)')
     parser.add_option('-m', '--mode',
-                      action='store', dest='mode', default='n',
+                      action='store', dest='mode', default='n0',
                       help= ('execution mode n=only print, x=execute e=mle models only r=mrt/rl models only (default %default)'
                             ' Example: -m xe executes all mle models ; -m r prints the commands for the mrt/rl models'))
     parser.add_option('-e', '--epochs',
