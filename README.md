@@ -3,6 +3,7 @@ This [code basis](https://github.com/ZurichNLP/coling2018-neural-transition-base
 Note that there is a separate git repository that contains all our [test data results of our reported systems](https://github.com/ZurichNLP/coling2018-neural-transition-based-morphology-test-data) in a consistently named and organized way. 
 And it also contains the respective gold standard data.
 
+The [paper](paper/coling-2018-paper.pdf) is in the repository as well.
 
 ## Requirements
 Our environment when running the experiments:
