@@ -1,4 +1,3 @@
-import models
 
 SEEDS = [5]
 
