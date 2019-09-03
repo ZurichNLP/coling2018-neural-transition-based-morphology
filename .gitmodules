@@ -1,22 +1,22 @@
 [submodule "data/sigmorphon-task1-2017"]
 	path = data/sigmorphon-task1-2017
-	url = https://gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/sigmorphon-task1-2017.git
+	url = https://gitlab.cl.uzh.ch/morphology-datasets/sigmorphon-2017-format/sigmorphon-task1-2017
 	branch = master
 [submodule "data/sigmorphon-task1-2017git"]
 	path = data/sigmorphon-task1-2017git
-	url = https://gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/sigmorphon-task1-2017.git
+	url = https://gitlab.cl.uzh.ch/morphology-datasets/sigmorphon-2017-format/sigmorphon-task1-2017
 	branch = master
 [submodule "data/celex"]
 	path = data/celex
-	url = https://gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/celex
+	url = https://gitlab.cl.uzh.ch/morphology-datasets/sigmorphon-2017-format/celex
 	branch = master
 [submodule "data/wicentowski-lemmatization"]
 	path = data/wicentowski-lemmatization
-	url = https://gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/wicentowski-lemmatization
+	url = https://gitlab.cl.uzh.ch/morphology-datasets/sigmorphon-2017-format/wicentowski-lemmatization
 	branch = master
 [submodule "data/celex-by-task"]
 	path = data/celex-by-task
-	url = https://gitlab.cl.uzh.ch:morphology-datasets/sigmorphon-2017-format/celex-by-task
+	url = https://gitlab.cl.uzh.ch/morphology-datasets/sigmorphon-2017-format/celex-by-task
 	branch = master
 [submodule "data/sigmorphon2016"]
 	path = data/sigmorphon2016
